@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border-box: Border-box;
+
+}
+
+.navbar {
+  height: 54px;
+  background-color: #0F1111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-logo {
+  height: 54px;
+  width: 120px;
+}
+
+.logo {
+  background-image: url("amazonlogo.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 54px;
+  width: 120px;
+}
+
+.border{
+  border: 1.5px solid transparent;
+}
+
+.border:hover{
+  border: 1.5px solid white;
+}
+
+/** box2 **/
+.add-first{
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-left: 22px;
+}
+
+.add-second{
+  font-size: 1rem;
+  color: white;
+  margin-left: 3px;
+}
+
+.add-icon{
+  display: flex;
+  align-items: center;
+}
+
+/** box3 **/
+.nav-search {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: pink;
+  width: 620px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.search-select {
+  background-color: #f3f3f3;
+  width: 50px;
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: none;
+}
+
+.search-input {
+  width: 570px;
+  font-size: 1rem;
+  border: none;
+}
+
+button {
+  background-color: #febd69;
+  width: 45px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: none;
+  font-size: 1rem;
+}
+
+.nav-search:hover {
+  border: 2px solid orange;
+
+}
+
+/** box4 **/
+span{
+  font-size: 0.7rem;
+}
+
+.nav-second {
+  font-size: 0.85;
+  font-weight: 700;
+}
+
+/** box6 **/
+.nac-cart i {
+  font-size: 30px;
+}
+
+.nav-cart {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/** panel **/
+
+.panel {
+  height: 40px;
+  background-color: #232f3e;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.panel-ops p {
+  display: inline;
+  margin-left: 15px;
+}
+
+.panel-ops {
+  width: 70%;
+  font-size: 0.85rem;
+}
+
+.panel-deals {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+body{
+  background-color: grey;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Large Card (Jaise 'Shop all things beauty' pehla bada card hai) */
+.large-card {
+  grid-column: span 1; /* Agar ise bada ya 2 column ka karna ho toh span 2 kar sakte hain */
+  min-height: 400px;
+}
+
+.tall-card {
+  min-height: 400px;
+}
+
+.card-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.card-image {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+.card-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Responsive design ke liye */
+@media (max-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Common Grid Properties */
+.category-grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Pehli row mein 5 columns */
+.row-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Doosri row mein 6 columns (Taki width adjust ho kar pehli row ke barabar aaye) */
+.row-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.card {
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Pehli row ke cards ki height */
+.row-5 .card {
+  min-height: 380px;
+}
+
+/* Doosri row ke cards ki height aur choti kar di gayi hai taaki 6 items fit ho sakein */
+.row-6 .card {
+  min-height: 240px;
+  padding: 10px;
+}
+
+.card-content h2, 
+.card-content h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+/* 6 columns wale cards ka text thoda chota rakha hai */
+.card-content h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.card-image {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Pehli row ki images */
+.row-5 .card-image img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+/* Doosri row ki images ki height aur width kam kar di gayi hai */
+.row-6 .card-image img {
+  max-width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .row-5, .row-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .row-5, .row-6 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/** footer **/
+footer
+.foot-panel1 {
+  background-color: #37475a;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.foot-panel2{
+  background-color: #222f3d ;
+  color: white;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+ul{
+  margin-top: 20px;
+}
+
+ul a{
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+
+}
+
+.foot-panel3{
+  background-color: #222f3d;
+  color: white;
+  border: 0.5px solid white;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-image: url("amazonlogo.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 100px;
+}
+
+.foot-panel4{
+  background-color: #0f1111;
+  color: white;
+  height: 80px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.pages {
+
+  padding-top: 25px;
+}
+
+.copyright {
+  padding-top: 5px;
+ 
+}
